@@ -42,9 +42,6 @@
                 <h2>About Me</h2>
                 <p>I live in Zone 1, Surallah, South Cotabato. I am an IT student passionate about building clean code, learning new programming languages, and exploring web development.</p>
                 
-                <!-- NEW: Toggle Button for Personal Details -->
-                <button id="info-btn" class="action-btn">ℹ️ Show Personal Info</button>
-
                 <h3>Education Timeline</h3>
                 <ul class="education-list">
                     <li><strong>Elementary:</strong> Notre Dame of Surallah <span>(2016 - 2017)</span></li>
@@ -87,28 +84,20 @@
         </div>
     </section>
 
-    <!-- NEW: Personal Info Modal Overlay -->
-    <div id="personal-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" class="close-btn">&times;</span>
-            <h2>Personal Background</h2>
-            <hr class="modal-divider">
-            <div class="info-list">
-                <p><strong>Full Name:</strong> Brian Seanley De Angel</p>
-                <p><strong>Location:</strong> Zone 1, Surallah, South Cotabato</p>
-                <p><strong>Mother:</strong> Sheena</p>
-                <p><strong>Guardians / Grandparents:</strong> Lorna (Grandma) & Fred (Grandpa)</p>
-                <p><strong>Hobbies:</strong> Casual Gaming, Programming, & Web Design</p>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Brian Seanley De Angel. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript File -->
-    <script src="script.js"></script>
+    <!-- Theme Switcher Script -->
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeBtn.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+        });
+    </script>
 </body>
 </html>
