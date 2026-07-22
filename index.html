@@ -1,103 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian Seanley De Angel - Portfolio</title>
+    <title>Brian Seanley De Angel | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header / Navbar -->
-    <header>
-        <div class="brand">
-            <img src="Gray Raven.webp" alt="Brian's Logo" class="logo">
-            <span class="brand-name">Brian Seanley</span>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Gray Raven.webp" alt="Gray Raven Logo" class="avatar-sm">
+                <span>Brian Seanley</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
         </div>
-        
-        <nav class="navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙 Dark</button>
-        </nav>
     </header>
 
-    <!-- Hero / Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Brian Seanley De Angel</h1>
-            <h2>Bachelor of Science in Information Technology</h2>
-            <p class="tagline">Aspiring Developer & Casual Gamer</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="container">
-        <div class="about-grid">
-            <img src="Simple.jpg" alt="Brian's Photo" class="profile-img">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I live in Zone 1, Surallah, South Cotabato. I am an IT student passionate about building clean code, learning new programming languages, and exploring web development.</p>
-                
-                <h3>Education Timeline</h3>
-                <ul class="education-list">
-                    <li><strong>Elementary:</strong> Notre Dame of Surallah <span>(2016 - 2017)</span></li>
-                    <li><strong>Junior High:</strong> Notre Dame of Surallah Inc. <span>(2020 - 2021)</span></li>
-                    <li><strong>Senior High:</strong> Notre Dame of Surallah Inc. <span>(2022 - 2023)</span></li>
-                </ul>
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="badge">BSIT Student & Casual Gamer</span>
+                <h1>Hi, I'm <span class="highlight">Brian Seanley De Angel</span></h1>
+                <p class="tagline">Passionate about coding, technology, and building simple software solutions.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Restaurant Management System</h3>
-                <p>A desktop/web-based application designed to manage restaurant orders, menus, and billing seamlessly.</p>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container grid-2">
+                <div class="about-img-wrapper">
+                    <img src="Simple.jpg" alt="Brian Seanley De Angel" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am an IT student based in Zone 1, Surallah, South Cotabato. Passionate about software development, gaming, and exploring modern technologies.</p>
+                    
+                    <h3>Education</h3>
+                    <ul class="timeline">
+                        <li>
+                            <strong>Senior High School</strong>
+                            <span>Notre Dame Of Surallah Inc. (2022 - 2023)</span>
+                        </li>
+                        <li>
+                            <strong>Junior High School</strong>
+                            <span>Notre Dame Of Surallah Inc. (2020 - 2021)</span>
+                        </li>
+                        <li>
+                            <strong>Elementary</strong>
+                            <span>Notre Dame Of Surallah (2016 - 2017)</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <div class="contact-card">
-            <p><strong>Email:</strong> <a href="mailto:briansean15@gmail.com">briansean15@gmail.com</a></p>
-            <p><strong>Phone:</strong> 09204515587</p>
-            <p><strong>Facebook:</strong> Brian Seanley De Angel</p>
-        </div>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2>Skills & Tools</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML5</h3>
+                        <p>Structuring clean, accessible web pages</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS3</h3>
+                        <p>Styling responsive layouts with Flexbox and Grid</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>Adding dynamic interactivity to web interfaces</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python</h3>
+                        <p>Building logic, automation, and backend scripts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3>Restaurant Management System</h3>
+                            <p>A functional software system designed to streamline ordering, menu tracking, and daily restaurant operations.</p>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container text-center">
+                <h2>Let's Connect</h2>
+                <p>Feel free to reach out for collaborations or just a casual chat about tech!</p>
+                <div class="contact-cards">
+                    <a href="mailto:briansean15@gmail.com" class="contact-item">
+                        <span>✉️ Email</span>
+                        <strong>briansean15@gmail.com</strong>
+                    </a>
+                    <a href="tel:09204515587" class="contact-item">
+                        <span>📞 Phone</span>
+                        <strong>09204515587</strong>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="contact-item">
+                        <span>🌐 Facebook</span>
+                        <strong>Brian Seanley De Angel</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2026 Brian Seanley De Angel. All Rights Reserved.</p>
     </footer>
 
-    <!-- Theme Switcher Script -->
-    <script>
-        const themeBtn = document.getElementById('theme-toggle');
-        
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            themeBtn.textContent = isDark ? '☀️ Light' : '🌙 Dark';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
